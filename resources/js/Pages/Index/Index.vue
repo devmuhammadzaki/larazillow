@@ -1,14 +1,16 @@
 <script setup>
-import { Link } from "@inertiajs/inertia-vue3";
-defineProps({
+import MainLayout from "../../Layouts/MainLayout.vue";
+const props = defineProps({
     message: String,
 });
 </script>
 
 <template>
-    <div>
-        <h1>Index Page</h1>
+    <MainLayout>
+        <div>
+            <h1>Index Page</h1>
 
-        <Link href="/show">Show Page</Link>
-    </div>
+            <p>{{ props.message }}</p>
+        </div>
+    </MainLayout>
 </template>
