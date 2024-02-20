@@ -1,16 +1,21 @@
 <script setup>
-import MainLayout from "../../Layouts/MainLayout.vue";
 const props = defineProps({
     message: String,
 });
 </script>
 
-<template>
-    <MainLayout>
-        <div>
-            <h1>Index Page</h1>
+<script>
+import MainLayout from "../../Layouts/MainLayout.vue";
 
-            <p>{{ props.message }}</p>
-        </div>
-    </MainLayout>
+export default {
+    layout: MainLayout,
+};
+</script>
+
+<template>
+    <div>
+        <h1>Index Page</h1>
+
+        <p>{{ props.message }}</p>
+    </div>
 </template>
