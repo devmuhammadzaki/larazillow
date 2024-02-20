@@ -1,6 +1,6 @@
+import MainLayout from "@/Layouts/MainLayout.vue";
 import { createInertiaApp } from "@inertiajs/inertia-vue3";
 import { createApp, h } from "vue";
-import MainLayout from "./Layouts/MainLayout.vue";
 
 createInertiaApp({
     resolve: async (name) => {
