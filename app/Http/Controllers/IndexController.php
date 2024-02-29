@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Listing;
+
 class IndexController extends Controller
 {
     public function index()
     {
         return inertia(
+            dd(Listing::all()),
             'Index/Index',
             [
                 'message' => 'Hello Index, from Laravel!',
