@@ -1,4 +1,5 @@
 <script setup>
+import ListingAddress from "@/Components/ListingAddress.vue";
 import { Link } from "@inertiajs/inertia-vue3";
 
 defineProps({
@@ -9,8 +10,7 @@ defineProps({
 <template>
     <div v-for="listing in listings" :key="listing.id">
         <Link :href="`/listing/${listing.id}`">
-            Property at {{ listing.street }} {{ listing.street_nr }},
-            {{ listing.city }} for ${{ listing.price }}.
+            <ListingAddress :listing="listing" />
         </Link>
     </div>
 </template>

@@ -1,12 +1,11 @@
 <script setup>
+import ListingAddress from "@/Components/ListingAddress.vue";
+
 defineProps({
     listing: Object,
 });
 </script>
 
 <template>
-    <div>
-        Property at {{ listing.street }} {{ listing.street_nr }},
-        {{ listing.city }} for ${{ listing.price }}.
-    </div>
+    <ListingAddress :listing="listing" />
 </template>
