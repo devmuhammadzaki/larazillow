@@ -1,5 +1,10 @@
 <script setup>
-import { Link } from "@inertiajs/inertia-vue3";
+import { computed } from "vue";
+import { Link, usePage } from "@inertiajs/inertia-vue3";
+
+const page = usePage();
+
+const flashSuccess = computed(() => page.props.value.flash.success);
 </script>
 
 <template>
@@ -12,6 +17,18 @@ import { Link } from "@inertiajs/inertia-vue3";
         </Link>
 
         <hr>
+
+        <div v-if="flashSuccess" class="success">
+            {{ flashSuccess }}
+        </div>
+
         <slot />
     </div>
 </template>
+
+<style scoped>
+.success {
+    background-color: green;
+    color: white;
+}
+</style>
