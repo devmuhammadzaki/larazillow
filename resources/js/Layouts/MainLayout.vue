@@ -4,10 +4,14 @@ import { Link } from "@inertiajs/inertia-vue3";
 
 <template>
     <div>
-        <Link href="/">Home Page</Link>&nbsp;
-        <Link href="/show">Show Page</Link>
+        <Link href="/">
+            Home Page
+        </Link>&nbsp;
+        <Link href="/show">
+            Show Page
+        </Link>
 
-        <hr />
+        <hr>
         <slot />
     </div>
 </template>
