@@ -19,6 +19,7 @@ module.exports = {
         "no-console": "off",
         "vue/html-indent": ["warn", 4],
         "vue/multi-word-component-names": "off",
+        "vue/require-default-prop": "off",
         "vue/max-attributes-per-line": [
             "warn",
             {

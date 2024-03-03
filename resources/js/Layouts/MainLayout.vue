@@ -9,11 +9,11 @@ const flashSuccess = computed(() => page.props.value.flash.success);
 
 <template>
     <div>
-        <Link href="/">
-            Home Page
+        <Link href="/listing">
+            Listings
         </Link>&nbsp;
-        <Link href="/show">
-            Show Page
+        <Link href="/listing/create">
+            New Listing
         </Link>
 
         <hr>
