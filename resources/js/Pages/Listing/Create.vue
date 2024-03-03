@@ -18,46 +18,48 @@ const form = useForm({
         <div>
             <div>
                 <label>Beds</label>
-                <input v-model.number="form.beds" type="text" />
+                <input v-model.number="form.beds" type="text">
             </div>
 
             <div>
                 <label>Baths</label>
-                <input v-model.number="form.baths" type="text" />
+                <input v-model.number="form.baths" type="text">
             </div>
 
             <div>
                 <label>Area</label>
-                <input v-model.number="form.area" type="text" />
+                <input v-model.number="form.area" type="text">
             </div>
 
             <div>
                 <label>City</label>
-                <input v-model="form.city" type="text" />
+                <input v-model="form.city" type="text">
             </div>
 
             <div>
                 <label>Post Code</label>
-                <input v-model="form.code" type="text" />
+                <input v-model="form.code" type="text">
             </div>
 
             <div>
                 <label>Street</label>
-                <input v-model="form.street" type="text" />
+                <input v-model="form.street" type="text">
             </div>
 
             <div>
                 <label>Street Nr</label>
-                <input v-model.number="form.street_nr" type="text" />
+                <input v-model.number="form.street_nr" type="text">
             </div>
 
             <div>
                 <label>Price</label>
-                <input v-model.number="form.price" type="text" />
+                <input v-model.number="form.price" type="text">
             </div>
 
             <div>
-                <button type="submit" :disabled="form.processing">Create</button>
+                <button type="submit" :disabled="form.processing">
+                    Create
+                </button>
             </div>
         </div>
     </form>
