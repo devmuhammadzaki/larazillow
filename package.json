@@ -1,12 +1,13 @@
 {
     "author": {
         "name": "Muhammad Zaki",
-        "email": "mahmadzekoo@gmail.com"},
+        "email": "mahmadzekoo@gmail.com"
+    },
     "name": "larazillow",
     "version": "0.1.0",
     "license": "MIT",
     "private": true,
-    "type": "module",
+    "type": "commonjs",
     "scripts": {
         "dev": "vite",
         "lint": "eslint --ext .js,.vue resources/js/",
