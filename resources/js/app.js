@@ -1,11 +1,11 @@
-import MainLayout from "@/Layouts/MainLayout.vue";
-import { createInertiaApp } from "@inertiajs/inertia-vue3";
-import { createApp, h } from "vue";
-import { ZiggyVue } from "ziggy";
+import MainLayout from '@/Layouts/MainLayout.vue';
+import { createInertiaApp } from '@inertiajs/inertia-vue3';
+import { createApp, h } from 'vue';
+import { ZiggyVue } from 'ziggy';
 
 createInertiaApp({
     resolve: async (name) => {
-        const pages = import.meta.glob("./Pages/**/*.vue");
+        const pages = import.meta.glob('./Pages/**/*.vue');
 
         const page = await pages[`./Pages/${name}.vue`]();
         page.default.layout = page.default.layout || MainLayout;

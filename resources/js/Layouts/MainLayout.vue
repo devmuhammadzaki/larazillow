@@ -1,6 +1,6 @@
 <script setup>
-import { computed } from "vue";
-import { Link, usePage } from "@inertiajs/inertia-vue3";
+import { computed } from 'vue';
+import { Link, usePage } from '@inertiajs/inertia-vue3';
 
 const page = usePage();
 
@@ -9,10 +9,10 @@ const flashSuccess = computed(() => page.props.value.flash.success);
 
 <template>
     <div>
-        <Link href="/listing">
+        <Link :href="route('listing.index')">
             Listings
         </Link>&nbsp;
-        <Link href="/listing/create">
+        <Link :href="route('listing.create')">
             New Listing
         </Link>
 

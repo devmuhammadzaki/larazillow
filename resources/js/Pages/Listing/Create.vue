@@ -1,5 +1,5 @@
 <script setup>
-import { useForm } from "@inertiajs/inertia-vue3";
+import { useForm } from '@inertiajs/inertia-vue3';
 
 const form = useForm({
     beds: 0,
@@ -14,7 +14,7 @@ const form = useForm({
 </script>
 
 <template>
-    <form @submit.prevent="form.post('/listing')">
+    <form @submit.prevent="form.post(route('listing.store'))">
         <div>
             <div>
                 <label>Beds</label>
