@@ -45,7 +45,7 @@ const { monthlyPayment } = useMonthlyPayment(
         <div>
             <Link
                 :href="route('listing.destroy', {listing: listing.id})"
-                method="DELETE"
+                method="delete"
                 as="button"
             >
                 Delete

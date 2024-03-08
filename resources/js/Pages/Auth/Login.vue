@@ -1,5 +1,6 @@
 <script setup>
-import { useForm } from '@inertiajs/inertia-vue3';
+import { useForm, Link } from '@inertiajs/inertia-vue3';
+
 const form = useForm({
     email: null,
     password: null,
@@ -38,6 +39,12 @@ const login = () => form.post(route('login.store'));
                 <button class="btn-primary w-full" type="submit">
                     Login
                 </button>
+
+                <div class="mt-2 text-center">
+                    <Link :href="route('user-account.create')" class="text-sm text-gray-500">
+                        Need an account? Click here
+                    </Link>
+                </div>
             </div>
         </div>
     </form>
