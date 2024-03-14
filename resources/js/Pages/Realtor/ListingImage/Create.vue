@@ -7,14 +7,18 @@ const props = defineProps({ listing: Object });
 const form = useForm({
     images: [],
 });
+
 const upload = () => {
-    form.post(
-        route('realtor.listing.image.store', { listing: props.listing.id }),
-        {
-            onSuccess: () => form.reset('images'),
-        },
-    );
+    if (form.images.length !== 0){
+        form.post(
+            route('realtor.listing.image.store', { listing: props.listing.id }),
+            {
+                onSuccess: () => form.reset('images'),
+            },
+        );
+    }
 };
+
 const addFiles = (event) => {
     for (const image of event.target.files) {
         form.images.push(image);
