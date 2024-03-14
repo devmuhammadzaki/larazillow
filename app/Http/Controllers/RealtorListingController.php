@@ -33,23 +33,11 @@ class RealtorListingController extends Controller
         );
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        // $this->authorize('create', Listing::class);
         return inertia('Realtor/Create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $request->user()->listings()->create(
@@ -104,5 +92,12 @@ class RealtorListingController extends Controller
 
         return redirect()->back()
             ->with('success', 'Listing was deleted!');
+    }
+
+    public function restore(Listing $listing)
+    {
+        $listing->restore();
+
+        return redirect()->back()->with('success', 'Listing was restored!');
     }
 }
