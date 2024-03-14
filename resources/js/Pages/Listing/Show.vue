@@ -5,6 +5,9 @@ import ListingAddress from '@/Components/ListingAddress.vue';
 import ListingSpace from '@/Components/ListingSpace.vue';
 import Price from '@/Components/Price.vue';
 import Box from '@/Components/UI/Box.vue';
+import MakeOffer from '@/Components/MakeOffer.vue';
+import { usePage } from '@inertiajs/inertia-vue3';
+import { computed } from 'vue';
 
 const interestRate = ref(2.5);
 const duration = ref(6);
@@ -15,6 +18,11 @@ const props = defineProps({
 
 const { monthlyPayment, totalPaid, totalInterest } = useMonthlyPayment(
     props.listing.price, interestRate, duration,
+);
+
+const page = usePage();
+const user = computed(
+    () => page.props.value.user,
 );
 </script>
 
@@ -96,6 +104,11 @@ const { monthlyPayment, totalPaid, totalInterest } = useMonthlyPayment(
                     </div>
                 </div>
             </Box>
+            <MakeOffer 
+                v-if="user"
+                :listing-id="listing.id" 
+                :price="listing.price"
+            />
         </div>
     </div>
 </template>
