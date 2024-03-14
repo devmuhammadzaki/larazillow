@@ -15,7 +15,7 @@ class ListingPolicy
      * @param string $ability
      * @return bool|null
      */
-    public function before(?User $user): ?bool
+    public function before(?User $user)
     {
         if ($user?->is_admin /*&& $ability === 'update'*/) {
             return true;
