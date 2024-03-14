@@ -19,17 +19,21 @@ use App\Http\Controllers\RealtorListingController;
 */
 
 Route::get('/', [IndexController::class, 'index']);
-Route::get('/show', [IndexController::class, 'show'])->middleware('auth');
+Route::get('/hello', [IndexController::class, 'show'])
+    ->middleware('auth');
 
 Route::resource('listing', ListingController::class)
-    ->only(['create', 'store', 'edit', 'update', 'destroy'])
+    ->only(['create', 'store', 'edit', 'update'])
     ->middleware('auth');
 Route::resource('listing', ListingController::class)
     ->except(['create', 'store', 'edit', 'update', 'destroy']);
 
-Route::get('login', [AuthController::class, 'create'])->name('login');
-Route::post('login', [AuthController::class, 'store'])->name('login.store');
-Route::delete('logout', [AuthController::class, 'destroy'])->name('logout');
+Route::get('login', [AuthController::class, 'create'])
+    ->name('login');
+Route::post('login', [AuthController::class, 'store'])
+    ->name('login.store');
+Route::delete('logout', [AuthController::class, 'destroy'])
+    ->name('logout');
 
 Route::resource('user-account', UserAccountController::class)
     ->only(['create', 'store']);
@@ -38,5 +42,6 @@ Route::prefix('realtor')
     ->name('realtor.')
     ->middleware('auth')
     ->group(function () {
-        Route::resource('listing', RealtorListingController::class);
+        Route::resource('listing', RealtorListingController::class)
+            ->only(['index', 'destroy']);
     });
