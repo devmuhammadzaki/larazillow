@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -56,8 +55,16 @@ class User extends Authenticatable
     public function listings(): HasMany
     {
         return $this->hasMany(
-            \App\Models\Listing::class,
+            Listing::class,
             'by_user_id'
+        );
+    }
+
+    public function offers(): HasMany
+    {
+        return $this->hasMany(
+            Offer::class,
+            'bidder_id'
         );
     }
 }
