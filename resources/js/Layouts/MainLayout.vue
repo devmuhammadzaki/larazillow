@@ -9,15 +9,21 @@ const flashSuccess = computed(() => page.props.value.flash.success);
 const user = computed(
     () => page.props.value.user,
 );
+
+const prenav = window.location.origin;
 </script>
 
 <template>
     <header class="border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 w-full">
         <div class="container mx-auto">
             <nav class="p-4 flex items-center justify-between">
-                <div class="text-lg font-medium">
+                <div>
                     <Link :href="route('listing.index')">
-                        Listings
+                        <img
+                            width="40"
+                            height="40"
+                            :src="prenav + '/storage/larazillowlogo.png'"
+                        >
                     </Link>
                 </div>
                 <div class="text-xl text-indigo-600 dark:text-indigo-300 font-bold text-center">
