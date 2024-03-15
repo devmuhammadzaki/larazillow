@@ -22,8 +22,7 @@ use App\Http\Controllers\RealtorListingAcceptOfferController;
 */
 
 Route::get('/', [IndexController::class, 'index']);
-Route::get('/hello', [IndexController::class, 'show'])
-    ->middleware('auth');
+Route::get('/about', [IndexController::class, 'about']);
 
 Route::resource('listing', ListingController::class)
     ->only(['index', 'show']);
