@@ -31,7 +31,6 @@ Route::resource('listing.offer', ListingOfferController::class)
     ->middleware('auth')
     ->only(['store']);
 
-
 Route::get('login', [AuthController::class, 'create'])
     ->name('login');
 Route::post('login', [AuthController::class, 'store'])
