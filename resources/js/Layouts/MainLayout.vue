@@ -22,7 +22,7 @@ const prenav = window.location.origin;
                         <img
                             width="40"
                             height="40"
-                            :src="prenav + '/storage/larazillowlogo.png'"
+                            :src="prenav + '/storage/site/larazillowlogo.png'"
                         >
                     </Link>
                 </div>
@@ -78,7 +78,7 @@ const prenav = window.location.origin;
                 class="p-4 flex flex-col items-center justify-between space-y-8 text-lg font-light md:flex-row md:space-y-0 md:space-x-14  text-indigo-600 dark:text-indigo-300"
             >
                 <img
-                    :src="prenav + '/storage/larazillowlogo.png'"
+                    :src="prenav + '/storage/site/larazillowlogo.png'"
                     alt=""
                     class="w-8 h-8"
                 >
