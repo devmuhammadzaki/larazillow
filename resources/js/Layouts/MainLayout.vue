@@ -18,7 +18,7 @@ const prenav = window.location.origin;
         <div class="container mx-auto">
             <nav class="p-4 flex items-center justify-between">
                 <div>
-                    <Link :href="route('listing.index')">
+                    <Link href="/">
                         <img
                             width="40"
                             height="40"
@@ -27,7 +27,7 @@ const prenav = window.location.origin;
                     </Link>
                 </div>
                 <div class="text-xl text-indigo-600 dark:text-indigo-300 font-bold text-center">
-                    <Link :href="route('listing.index')">
+                    <Link href="/">
                         LaraZillow
                     </Link>
                 </div>
@@ -49,10 +49,10 @@ const prenav = window.location.origin;
                     </div>
                 </div>
                 <div v-else class="flex items-center gap-2">
-                    <Link :href="route('user-account.create')">
+                    <Link :href="route('user-account.create')" class="hover:text-indigo-600">
                         Register
                     </Link>
-                    <Link :href="route('login')">
+                    <Link :href="route('login')" class="hover:text-indigo-600">
                         Sign-In
                     </Link>
                 </div>
@@ -69,4 +69,45 @@ const prenav = window.location.origin;
         </div>
         <slot />
     </main>
+
+    <footer class="border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 w-full bottom-0">
+        <div
+            class="container flex flex-col items-center justify-between mx-auto space-y-16 px-6 md:flex-row md:space-y-0"
+        >
+            <div
+                class="p-4 flex flex-col items-center justify-between space-y-8 text-lg font-light md:flex-row md:space-y-0 md:space-x-14  text-indigo-600 dark:text-indigo-300"
+            >
+                <img
+                    :src="prenav + '/storage/larazillowlogo.png'"
+                    alt=""
+                    class="w-8 h-8"
+                >
+
+                <Link href="/" class="hover:text-white">
+                    Home
+                </Link>
+                <Link href="/about" class="hover:text-white">
+                    About
+                </Link>
+            </div>
+
+            <!-- Social Container -->
+            <div class="flex space-x-10 py-6">
+                <Link href="https://facebook.com">
+                    <img
+                        :src="prenav + '/storage/social/icon-facebook.svg'"
+                        alt=""
+                        class="h-6 ficon"
+                    >
+                </Link>
+                <Link href="https://twitter.com">
+                    <img
+                        :src="prenav + '/storage/social/icon-twitter.svg'"
+                        alt=""
+                        class="h-6 ficon"
+                    >
+                </Link>
+            </div>
+        </div>
+    </footer>
 </template>

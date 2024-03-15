@@ -11,6 +11,40 @@
         @apply block w-full p-2 rounded-md shadow-sm border border-gray-300 dark:border-gray-600 text-gray-500;
     }
 
+    .ficon:hover {
+        filter: invert(53%) hue-rotate(200deg) saturate(150%) brightness(110%) contrast(96%);
+    }
+
+    .column {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+    }
+
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 8px;
+        @apply border border-gray-200 dark:border-gray-700;
+    }
+
+    .title {
+        color: grey;
+    }
+
+    @media screen and (max-width: 650px) {
+        .column {
+            width: 100%;
+            display: block;
+        }
+    }
+
     .input-error {
         @apply text-sm text-red-500 dark:text-red-400;
     }
@@ -24,7 +58,7 @@
     }
 
     .btn-normal {
-        @apply bg-gray-600 hover:bg-gray-500 text-white font-medium p-2 rounded-md
+        @apply bg-gray-600 hover:bg-gray-500 text-white font-medium p-2
     }
 
     .btn-primary {
