@@ -97,7 +97,7 @@ const clear = () => {
                 >
             </div>
 
-            <button type="submit" class="btn-normal">
+            <button type="submit" class="btn-normal rounded-md">
                 Filter
             </button>
             <button type="reset" @click="clear">
