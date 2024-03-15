@@ -32,7 +32,7 @@ mysql -uroot -e "CREATE DATABASE larazillow_db"
 
 If you have password for your database, you need to specify `-p` on the command.
 
-5. Configure your database settings in `.env`
+5. Configure your database and email sender settings in `.env`
 
 ```
 DB_CONNECTION=mysql
@@ -41,6 +41,15 @@ DB_PORT=3306
 DB_DATABASE=larazillow_db
 DB_USERNAME=root
 DB_PASSWORD=
+
+MAIL_MAILER=smtp
+MAIL_HOST=localhost
+MAIL_PORT=1025
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS="test@example.com"
+MAIL_FROM_NAME="${APP_NAME}"
 ```
 
 6. Migrate database tables and seed them with fake data
