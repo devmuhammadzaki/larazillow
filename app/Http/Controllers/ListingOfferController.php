@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Offer;
 use App\Models\Listing;
-use App\Notifications\OfferMade;
 use Illuminate\Http\Request;
+use App\Notifications\OfferMade;
 
 class ListingOfferController extends Controller
 {
@@ -20,8 +20,7 @@ class ListingOfferController extends Controller
                 ])
             )->bidder()->associate($request->user())
         );
-
-        $listing->owner()->notify(
+        $listing->owner->notify(
             new OfferMade($offer)
         );
 
