@@ -4,6 +4,9 @@
 
 Larazillow is a Single page Web Application for selling and buying real estate, built with Laravel/Vue.js, Tailwind CSS, and Inertia.js.
 
+## Demo
+<video src='./demo.mp4' width=180/>
+
 ## Installation
 
 1. Download the code by clicking **Code**, **Download ZIP**. Or if you have Git install in your machine, you can run this in your terminal.
