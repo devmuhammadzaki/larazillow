@@ -63,14 +63,19 @@ php artisan migrate --seed
 ```
 php artisan key:generate
 ```
+8. Link storage (for photos and icons associated with the project)
 
-8. Install frontend dependencies.
+```
+php artisan storage:link
+```
+
+10. Install frontend dependencies.
 
 ```
 npm install
 ```
 
-9. Run local server
+10. Run local server
 
 ```
 php artisan serve
