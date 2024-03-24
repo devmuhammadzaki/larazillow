@@ -22,13 +22,19 @@ git clone https://github.com/0xAlMo3geZ/larazillow.git
 composer install
 ```
 
-3. Copy `.env` file from `.env.example`. In NIX machine you can use this command.
+3. Install frontend dependencies.
+
+```
+npm install
+```
+
+4. Copy `.env` file from `.env.example`. In NIX machine you can use this command.
 
 ```
 cp .env.example .env
 ```
 
-4. Prepare a database. You can use this command.
+5. Prepare a database. You can use this command.
 
 ```
 mysql -uroot -e "CREATE DATABASE larazillow_db"
@@ -36,7 +42,7 @@ mysql -uroot -e "CREATE DATABASE larazillow_db"
 
 If you have password for your database, you need to specify `-p` on the command.
 
-5. Configure your database and email sender settings in `.env`
+6. Configure your database and email sender settings in `.env`
 
 ```
 DB_CONNECTION=mysql
@@ -56,33 +62,33 @@ MAIL_FROM_ADDRESS="test@example.com"
 MAIL_FROM_NAME="${APP_NAME}"
 ```
 
-6. Migrate database tables and seed them with fake data
+7. Migrate database tables and seed them with fake data
 
 ```
 php artisan migrate --seed
 ```
 
-7. Generate a key for you application
+8. Generate a key for you application
 
 ```
 php artisan key:generate
 ```
-8. Link storage (for photos and icons associated with the project)
+9. Link storage (for photos and icons associated with the project)
 
 ```
 php artisan storage:link
 ```
 
-10. Install frontend dependencies.
-
-```
-npm install
-```
-
-10. Run local server
+10. Run php development server
 
 ```
 php artisan serve
+```
+
+11. Run node.js development server (alongside php server)
+
+```
+npm run dev
 ```
 
 Your local copy of larazillow is ready to access in your browser ;)
