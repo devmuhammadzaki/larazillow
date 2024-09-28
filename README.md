@@ -13,7 +13,7 @@ Due to obvious financial issues, I was not able to host the project on any free 
 1. Download the code by clicking **Code**, **Download ZIP**. Or if you have Git install in your machine, you can run this in your terminal.
 
 ```
-git clone https://github.com/0xAlMo3geZ/larazillow.git
+git clone https://github.com/devmuhammadzaki/larazillow.git
 ```
 
 2. Change directory to your local copy of `larazillow` in your terminal. Then install composer dependencies.
